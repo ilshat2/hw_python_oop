@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Optional
 
 
 class InfoMessage:
@@ -132,7 +132,7 @@ class Swimming(Training):
                 * self.COEFF_CALORIE_2 * self.weight)
 
 
-def read_package(workout_type: str, data: list) -> Union[Training, str]:
+def read_package(workout_type: str, data: list) -> Optional[Training]:
     """Прочитать данные полученные от датчиков."""
     read_package_dict = {'SWM': Swimming,
                          'RUN': Running,
